@@ -2,6 +2,8 @@
 // /* eslint-disable no-undef */
 const paygreenPayment =()=>{
 
+  const shopId ="sh_69b974d635c34df18c807baed0794836";
+  const publicKey = "pk_6d92047e838d4870b74857ba47e2eebd";
   const initPGJS = () => {
       paygreenjs.attachEventListener(
         paygreenjs.Events.CVV_FIELD_FULFILLED,
@@ -20,7 +22,7 @@ const paygreenPayment =()=>{
       paygreenjs.init({
         mode: "instrument",
         modeOptions: {
-          shopId: "sh_69b974d635c34df18c807baed0794836",
+          shopId: shopId,
         },
         style: {
           input: {
@@ -32,7 +34,7 @@ const paygreenPayment =()=>{
         },
 
         paymentMethod: "conecs",
-        publicKey: "pk_6d92047e838d4870b74857ba47e2eebd",
+        publicKey: publicKey,
       });
     };
 
