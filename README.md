@@ -1,8 +1,52 @@
-# React + Vite
+# Nom de Votre Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Courte description de votre application.
 
-Currently, two official plugins are available:
+## Prérequis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (version x.x.x)
+- npm (version x.x.x)
+
+## Installation
+
+1. Clonez le dépôt.
+
+```sh
+git remote add origin https://github.com/steeven-louk/pikkopay.git
+```
+
+2. Accedez au dossier
+
+```sh
+cd pikkopay
+```
+
+3. Installez les dépendances.
+
+```sh
+npm install
+```
+
+## Utilisation
+
+- Exécutez l'application en mode développement.
+
+```sh
+npm run dev
+```
+
+- L'application sera accessible à l'adresse http://localhost:5173
+
+## Technologies Utilisées
+- React
+- Vite
+- Tailwind CSS
+- Font Awesome
+- Icônes SVG personnalisées
+
+## Fonctionnalités
+- Icônes SVG pour une expérience visuelle améliorée.
+- Utilisation de Tailwind CSS pour la mise en page et les styles.
+- Intégration de Font Awesome pour les icônes supplémentaires.
+- Loader sur le bouton lors du traitement.
+- Page de chargement en cas de besoin.
