@@ -4,8 +4,8 @@
 
 ## Prérequis
 
-- Node.js (version x.x.x)
-- npm (version x.x.x)
+- Node.js (version 18.16.1)
+- npm (version 9.6.0)
 
 ## Installation
 
