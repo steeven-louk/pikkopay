@@ -10,14 +10,13 @@ import { Loading } from "./components/Loading";
 function App() {
 
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const handleClick = () => {
     setIsLoading(true)
   };
 
   useEffect(() => {
-    paygreenPayment(setIsError);
+    paygreenPayment();
   }, []);
 
   return (
@@ -178,8 +177,9 @@ function App() {
           id="payButton"
           className="button inline-flex justify-center items-center mt-10 mb-3 gap-2 "
           onClick={handleClick}
-          disabled={isError || isLoading}
-        > {/* <div className="button-loader"></div> */}
+          disabled={isLoading}
+        > 
+        {/* <div className="button-loader"></div>  à utiliser à la place du composant Loading, si celui si doit être sur le button de payment */}
         {isLoading ? 
          
           <Loading/>
@@ -202,13 +202,12 @@ function App() {
           <img
             src={underBar}
             alt="pikkopay_UnderBar"
-            className="absolute  w-20  translate-y-4 -z-10"
+            className="absolute  w-20  translate-y-10 -z-10"
           />
 
-          <label className="secured-label inline-flex items-center gap-3">
+          <label className="secured-label items-center">
             {" "}
-            Payment secured and powered by <strong>Paygreen</strong>
-            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"/></svg>
+            Payment secured and powered by <strong className="ml-1 inline-flex items-center">Paygreen <svg  xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"/></svg></strong>
           </label>
         </div>
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // /* eslint-disable no-undef */
-const paygreenPayment =(props)=>{
+const paygreenPayment =()=>{
 
   const initPGJS = () => {
       paygreenjs.attachEventListener(
@@ -16,21 +16,6 @@ const paygreenPayment =(props)=>{
           paygreenjs.focus("cvv");
         }
       );
-
-      // Erreur de saisie utilisateur
-      paygreenjs.attachEventListener(
-        paygreenjs.Events.PAN_FIELD_ONCHANGE,
-        (event) => {
-          const error = event?.detail?.error;
-          if(error) {
-            props.setIsError(true);
-          } else {
-           props.setIsError(false)
-          }
-        },
-      );
-      // Erreur de saisie utilisateur
-
 
       paygreenjs.init({
         mode: "instrument",
