@@ -1,5 +1,147 @@
-#root {
-  max-width: 1280px;
+*{
+  transition: .1s all ease-in-out
+}
+main {
   padding: 2rem;
 }
+
+
+button {
+  cursor: pointer;
+  outline: 0;
+  font-weight: 400;
+
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(135deg, #e2fc26, #f2e526);
+  box-shadow: 1px 2px 5px #000;
+
+  border-radius: 50px;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+  width: 100%;
+  
+}
+
+/* FORMULAIRE DE PAYMENT */
+
+.paygreen-pan-frame, .paygreen-cvv-frame, .paygreen-exp-frame {
+  padding: 0 0.5rem;
+  box-shadow: none;  
+}
+
+.paygreen-pan-frame:hover, .paygreen-cvv-frame:hover, .paygreen-exp-frame:hover{
+  border-bottom: solid 6px !important;
+}
+
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line > div {
+  max-width: 48%;
+}
+
+
+.paygreen-cvv-frame, .paygreen-pan-frame, .paygreen-cvv-frame, .paygreen-exp-frame	{
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(135deg, rgb(226, 252, 38), rgb(242, 229, 38)) 1;
+  margin-top: 5px;
+} 
+
+label{
+  font-weight: bold;
+}
+
+/* FORMULAIRE DE PAYMENT */
+
+/* ANIMATION */
+.circle-1 ,.circle-2{
+  opacity: .5;
+  animation: circle-1 3s alternate ease;
+  background-image: linear-gradient(135deg,#f2e526, #f17726 );
+}
+
+.circle-3, .circle-5{
+  opacity: .5;
+  animation: circle-3 3s .2s alternate ease;
+  background-image: linear-gradient(135deg,#f2e526, #f17726 );
+}
+
+.circle-4 {
+  opacity: .5;
+  animation: circle-4 3s .2s alternate ease;
+  background-image: linear-gradient(135deg,#f2e526, #f17726 );
+}
+
+.button-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#766DF4);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:loading 1s infinite linear;
+}
+
+.loader {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#ef9614 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#ef9614);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:loading 1s infinite linear;
+}
+
+
+@keyframes circle-1 {
+  0% {
+       transform: translateX(145px);
+    }
+    100% {
+       transform: translateX(0px);
+
+    }
+}
+@keyframes circle-3 {
+  from {
+       opacity: 0;
+    }
+    to {
+       opacity: 100%;
+
+    }
+}
+
+@keyframes circle-4 {
+  0% {
+       transform: translateY(145px);
+       opacity: 0;
+    }
+    100% {
+       transform: translateY(0px);
+       opacity: 100%;
+
+    }
+}
+
+@keyframes loading{ 
+  100%{transform: rotate(1turn)}
+}
+/* ANIMATION */
+
+
+
+
 
