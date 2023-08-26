@@ -15,13 +15,15 @@ function App() {
     setIsLoading(true)
   };
 
-  useEffect(() => {
+
+useEffect(() => {
     paygreenPayment();
   }, []);
 
   return (
     <main className="relative text-[#000] overflow-hidden h-[100vh]">
-
+      {isLoading && <Loading/>} {/**Lance le loading une fois le button appuyer */}
+      
       {/* CERCLE DE FOND */}
       <div className="circle-1 absolute -right-20 -top-12 -z-10 w-[150px] h-[150px] rounded-full bg-red-800"></div>
       <div className="circle-2 absolute -left-20 -bottom-[100px] -z-10 w-[250px] h-[250px] rounded-full bg-red-500"></div>
@@ -173,20 +175,10 @@ function App() {
 
         </div>
 
-        <button
-          id="payButton"
-          className="button inline-flex justify-center items-center mt-10 mb-3 gap-2 "
-          onClick={handleClick}
-          disabled={isLoading}
-        > 
-        {/* <div className="button-loader"></div>  à utiliser à la place du composant Loading, si celui si doit être sur le button de payment */}
-        {isLoading ? 
-         
-          <Loading/>
+       <button className="button inline-flex justify-center items-center mt-10 mb-3 gap-2" onClick={handleClick}
+          disabled={isLoading}> 
 
-          :
-       
-         <><svg
+         <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 448 512"
@@ -194,9 +186,8 @@ function App() {
             <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
           </svg>
           Payer <strong>240.21 €</strong> 
-          </>
-        }
-        </button>
+        </button> 
+
 
         <div className="icon-sentence relative">
           <img

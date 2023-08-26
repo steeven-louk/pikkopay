@@ -48,5 +48,4 @@ npm run dev
 - Icônes SVG pour une expérience visuelle améliorée.
 - Utilisation de Tailwind CSS pour la mise en page et les styles.
 - Intégration de Font Awesome pour les icônes supplémentaires.
-- Loader sur le bouton lors du traitement.
-- Page de chargement en cas de besoin.
+- Page de chargement.
